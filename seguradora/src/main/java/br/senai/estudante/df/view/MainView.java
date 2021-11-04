@@ -94,6 +94,11 @@ public class MainView extends javax.swing.JFrame {
         mnTools.setText("Ferramentas");
 
         mniReport.setText("Relatorio");
+        mniReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniReportActionPerformed(evt);
+            }
+        });
         mnTools.add(mniReport);
 
         mnbMenu.add(mnTools);
@@ -163,6 +168,10 @@ public class MainView extends javax.swing.JFrame {
                 Language.text("contact") + ": luan.n@df.estudante.senai.br" +
                 "</html>", Language.text("about"), JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_mniAboutActionPerformed
+
+    private void mniReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReportActionPerformed
+        new ReportView().setVisible(true);
+    }//GEN-LAST:event_mniReportActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
