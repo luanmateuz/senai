@@ -16,9 +16,18 @@ public class Report {
         throw new IllegalStateException("Utility class");
     }
 
-    public void generateReport(List<Occurrence> occurrenceList) throws JRException {
-        JasperReport report = JasperCompileManager.compileReport("src/main/java/br/senai/estudante/df/util/template.jrxml");
-        JasperPrint print = JasperFillManager.fillReport(report, null, new JRBeanCollectionDataSource(occurrenceList));
-        JasperViewer.viewReport(print, false);
+    public static void generateReport() {
+        log.info("Generating report");
+        try {
+            List<Occurrence> occurrenceList = new OccurrenceController().showList();
+            String sourceFileName = "src/main/java/br/senai/estudante/df/util/template.jrxml";
+
+            JasperReport report = JasperCompileManager.compileReport(sourceFileName);
+            JasperPrint print = JasperFillManager.fillReport(report, null, new JRBeanCollectionDataSource(occurrenceList));
+            JasperViewer.viewReport(print, false);
+        } catch (JRException e) {
+            log.error("Error while trying to generating report", e);
+        }
+
     }
 }
