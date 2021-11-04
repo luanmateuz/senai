@@ -20,10 +20,11 @@ public class Report {
         log.info("Generating report");
         try {
             List<Occurrence> occurrenceList = new OccurrenceController().showList();
-            String sourceFileName = "src/main/java/br/senai/estudante/df/util/template.jrxml";
+            String sourceFileName = "src/main/resources/template.jrxml";
 
             JasperReport report = JasperCompileManager.compileReport(sourceFileName);
-            JasperPrint print = JasperFillManager.fillReport(report, null, new JRBeanCollectionDataSource(occurrenceList));
+            JasperPrint print = JasperFillManager
+                    .fillReport(report, null, new JRBeanCollectionDataSource(occurrenceList));
             JasperViewer.viewReport(print, false);
         } catch (JRException e) {
             log.error("Error while trying to generating report", e);
