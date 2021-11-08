@@ -12,6 +12,10 @@ public class Language {
         bundle = ResourceBundle.getBundle("language", Language.DEFAULT);
     }
 
+    private Language() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static String text(String text) {
         return bundle.getString(text);
     }

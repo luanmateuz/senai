@@ -5,16 +5,21 @@
  */
 package br.senai.estudante.df.view;
 
+import br.senai.estudante.df.util.Report;
+import lombok.extern.log4j.Log4j2;
+
 /**
  *
  * @author luan
  */
+@Log4j2
 public class ReportView extends javax.swing.JFrame {
 
     /**
      * Creates new form ReportView
      */
     public ReportView() {
+        log.info("Report view");
         initComponents();
     }
 
@@ -78,7 +83,7 @@ public class ReportView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGenerateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateActionPerformed
-        
+        Report.generateReport();
     }//GEN-LAST:event_btnGenerateActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
