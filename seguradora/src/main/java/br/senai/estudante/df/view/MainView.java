@@ -6,6 +6,7 @@
 
 package br.senai.estudante.df.view;
 
+import br.senai.estudante.df.util.Help;
 import br.senai.estudante.df.util.Language;
 import lombok.extern.log4j.Log4j2;
 
@@ -153,7 +154,7 @@ public class MainView extends javax.swing.JFrame {
     }//GEN-LAST:event_mniOccurrenceActionPerformed
 
     private void mniHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniHelpActionPerformed
-        // TODO add your handling code here:
+        Help.help();
     }//GEN-LAST:event_mniHelpActionPerformed
 
     private void mniAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniAboutActionPerformed
