@@ -11,6 +11,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 import br.senai.estudante.df.model.entities.Car;
+import br.senai.estudante.df.util.Language;
 import lombok.extern.log4j.Log4j2;
 
 import java.util.List;
@@ -29,11 +30,29 @@ public class CarView extends javax.swing.JFrame {
     public CarView() {
         log.info("Car view");
         initComponents();
+        language();
         controller = new CarController(this);
         showList();
         disableFields();
     }
-    
+
+    private void language() {
+        lblId.setText(Language.text("id"));
+        lblLicensePlate.setText(Language.text("licensePlate"));
+        lblReindeer.setText(Language.text("reindeer"));
+        manufacturer.setText(Language.text("manufacturer"));
+        lblModel.setText(Language.text("model"));
+        lblYear.setText(Language.text("year"));
+        lblColor.setText(Language.text("color"));
+
+        lblModelSearch.setText(Language.text("name"));
+
+        btnModelSearch.setText(Language.text("search"));
+        btnNew.setText(Language.text("new"));
+        btnAlter.setText(Language.text("alter"));
+        btnRegister.setText(Language.text("register"));
+        btnDelete.setText(Language.text("delete"));
+    }
     public void enableFields() {
 //        txfId.setEditable(true);
         txfLicensePlate.setEditable(true);

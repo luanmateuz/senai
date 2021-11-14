@@ -41,6 +41,8 @@ public class ClientView extends javax.swing.JFrame {
         lblCpf.setText(Language.text("cpf"));
         lblPhone.setText(Language.text("phone"));
 
+        lblNameSearch.setText(Language.text("name"));
+
         btnNameSearch.setText(Language.text("search"));
         btnNew.setText(Language.text("new"));
         btnAlter.setText(Language.text("alter"));
