@@ -11,6 +11,7 @@ import br.senai.estudante.df.controller.OccurrenceController;
 import br.senai.estudante.df.model.entities.Car;
 import br.senai.estudante.df.model.entities.Client;
 import br.senai.estudante.df.model.entities.Occurrence;
+import br.senai.estudante.df.util.Language;
 import lombok.extern.log4j.Log4j2;
 
 import javax.swing.*;
@@ -37,8 +38,21 @@ public class OccurrenceView extends javax.swing.JFrame {
         clientController = new ClientController();
         carController = new CarController();
         initComponents();
+        language();
         showList();
         disableFields();
+    }
+
+    private void language() {
+        lblId.setText(Language.text("id"));
+        lblDesc.setText(Language.text("desc"));
+        lblDate.setText(Language.text("data"));
+        lblIdClient.setText(Language.text("id"));
+        lblIdCar.setText(Language.text("id"));
+        lblLocal.setText(Language.text("local"));
+        lblLicensePlate.setText(Language.text("licensePlate"));
+        lblModel.setText(Language.text("model"));
+        lblNome.setText(Language.text("name"));
     }
 
     public void enableFields() {

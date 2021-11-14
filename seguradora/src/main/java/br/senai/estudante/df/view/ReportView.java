@@ -5,6 +5,7 @@
  */
 package br.senai.estudante.df.view;
 
+import br.senai.estudante.df.util.Language;
 import br.senai.estudante.df.util.Report;
 import lombok.extern.log4j.Log4j2;
 
@@ -21,6 +22,14 @@ public class ReportView extends javax.swing.JFrame {
     public ReportView() {
         log.info("Report view");
         initComponents();
+        language();
+    }
+
+    private void language() {
+        this.setTitle(Language.text("report"));
+        btnGenerate.setText(Language.text("generate"));
+        lblOccurrences.setText(Language.text("occurrences"));
+        lblReport.setText(Language.text("report"));
     }
 
     /**
