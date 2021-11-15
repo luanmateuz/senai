@@ -161,13 +161,15 @@ public class MainView extends javax.swing.JFrame {
         log.info("About view");
         JOptionPane.showMessageDialog(this,
                 "<html>" +
+                "<center>Senai</center>" +
                 "<center>Projeto Seguradora</center>" +
                 "<br>" +
                 Language.text("teacher") + ": Willians <br>" +
                 Language.text("madeBy") + ": Luan Mateus <br>" +
                 "<br>" +
                 Language.text("contact") + ": luan.n@df.estudante.senai.br" +
-                "</html>", Language.text("about"), JOptionPane.INFORMATION_MESSAGE);
+                "<br><br><center>copyright © 2021</center><br>" +
+                "</html>", Language.text("about"), JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_mniAboutActionPerformed
 
     private void mniReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniReportActionPerformed
