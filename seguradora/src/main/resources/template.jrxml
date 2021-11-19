@@ -42,35 +42,47 @@
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch">
+		<band height="40" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="141" height="30" uuid="2ad5a69f-2805-430c-9b43-37bd7a90588f">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b39e59ec-0c2c-410c-b364-6b8bdb309e0c"/>
 				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="141" y="0" width="138" height="30" uuid="7afccf31-21e2-4396-a9c3-538000de919f">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="97586491-6514-4ad6-965e-5534b7a68608"/>
 				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[Data]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="279" y="0" width="138" height="30" uuid="6c10d38d-80ab-4ed5-b411-c20dd326ae61">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d8020700-dfa3-4dfe-868a-a08bd169858f"/>
 				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
 				<text><![CDATA[Local]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="417" y="0" width="138" height="30" uuid="05457d85-b389-478a-ad1e-fc857e86da54">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6d856088-4b92-482c-9298-16b3d57ab013"/>
 				</reportElement>
-				<text><![CDATA[Descricao]]></text>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="40" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="141" height="30" uuid="c4d4887b-c6cb-49e9-943f-b257e624c6b6">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b39e59ec-0c2c-410c-b364-6b8bdb309e0c"/>
